@@ -84,7 +84,7 @@ public class HandleMessageRunnable implements Runnable {
             if(messageType.equals(Configuration.TYPE_EXIT)) {
                 // update ArrayList and HashMap, remove quited uid and thread
                 removeClient();
-                // update onlinelist
+                // update onlineList
                 updateOnlineList();
                 // end
                 break;

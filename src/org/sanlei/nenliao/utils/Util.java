@@ -27,6 +27,7 @@ public class Util {
         try {
             localHostAddress=InetAddress.getLocalHost().getHostAddress();
         } catch (Exception e) {
+            e.printStackTrace();
         }
         return localHostAddress;
     }

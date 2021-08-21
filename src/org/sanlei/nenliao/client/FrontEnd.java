@@ -17,7 +17,6 @@ import javax.swing.table.DefaultTableModel;
 import org.sanlei.nenliao.utils.Configuration;
 import org.sanlei.nenliao.utils.Util;
 public class FrontEnd extends JFrame {
-    private static final long serialVersionUID = 94264426;
     private StringBuilder receiverStringBuilder;
     private Socket socket;
     private JButton sendButton;
@@ -42,11 +41,9 @@ public class FrontEnd extends JFrame {
 
     private void initFrame() {
         // 标题
-        setTitle("Young Chat");
+        setTitle("嫩聊");
         // 大小
         setSize(Configuration.CLIENT_FRAME_WIDTH, Configuration.CLIENT_FRAME_HEIGHT);
-        // 不可缩放
-        // setResizable(false);
         // 设置布局:不使用默认布局，完全自定义
         setLayout(null);
     }
@@ -139,7 +136,7 @@ public class FrontEnd extends JFrame {
     private void initSendJTextArea() {
         sendJTextArea = new JTextArea();
         sendJTextArea.setBounds(20, 460, 360, 120);
-        sendJTextArea.setFont(new Font("楷体", Font.BOLD, 16));
+        sendJTextArea.setFont(new Font("宋体", Font.BOLD, 16));
         this.add(sendJTextArea);
     }
 
@@ -166,7 +163,6 @@ public class FrontEnd extends JFrame {
         // 当前在线用户列表的列标题
         String[] colTitles = { "IP", "端口" };
         onlineJTable = new JTable(new DefaultTableModel(null, colTitles) {
-            private static final long serialVersionUID = -4350422327693462629L;
             // 设置表格不可编辑
             @Override
             public boolean isCellEditable(int row, int column) {
